@@ -1,0 +1,41 @@
+.Titulo {
+  padding: 10px 20px 10px 20px;
+  font-size: 32px;
+  margin-left: 50px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+.tituloDiv {
+  display: flex;
+  align-items: center;
+}
+
+.Pesquisa {
+  padding: 20px 400px 20px 20px;
+  height: 25%;
+  margin-right: 200px;
+  border-bottom: none;
+  border-top: none;
+  border-left: 1px solid rgba(128, 128, 128, 0.707);
+  border-right: 1px solid rgba(128, 128, 128, 0.707);
+  outline: none;
+  font-size: 16px;
+}
+button {
+  padding: 12px;
+  height: 50%;
+  width: 100px;
+}
+.IconPesquisa{
+  color: blue;
+}
+testando{
+  color: blue; 
+
+}
+/* teste
