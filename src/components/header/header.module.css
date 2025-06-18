@@ -1,3 +1,4 @@
+
 .Titulo {
   padding: 10px 20px 10px 20px;
   font-size: 32px;
@@ -8,7 +9,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 100%;
 }
 .tituloDiv {
   display: flex;
@@ -16,26 +18,48 @@
 }
 
 .Pesquisa {
-  padding: 20px 400px 20px 20px;
-  height: 25%;
-  margin-right: 200px;
-  border-bottom: none;
-  border-top: none;
-  border-left: 1px solid rgba(128, 128, 128, 0.707);
-  border-right: 1px solid rgba(128, 128, 128, 0.707);
-  outline: none;
-  font-size: 16px;
+    padding: 20px 400px 20px 48px;
+    min-height: 10px;
+    max-height: 10px;
+    margin-right: 200px;
+    border-bottom: none;
+    border-top: none;
+    border-left: 2px solid rgba(128, 128, 128, 0.707);
+    border-right: 2px solid rgba(128, 128, 128, 0.707);
+    outline: none;
+    font-size: 16px;
+}
+.botoesHeader{
+  margin-right: 100px;
+  display: flex;
+  gap: 40px;
+}
+.btnUser{
+  background-color: rgba(0, 0, 255, 0.825);
+  transition: all 0.5s ease
 }
 button {
-  padding: 12px;
+  padding: 2px;
   height: 50%;
-  width: 100px;
+  width: 50px;
+  background-color: rgba(148, 148, 148, 0.897);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+}
+button:hover{
+  background-color: rgba(99, 99, 99, 0.722);
+  transform: scale(1.05)
+}
+.btnUser:hover{
+  background-color: rgba(0, 0, 255, 0.662);
+  transform: scale(1.05)
 }
 .IconPesquisa{
-  color: blue;
+  color: rgb(99, 99, 100);
+  position: absolute;
+  left: 15%;
 }
-testando{
-  color: blue; 
 
-}
-/* teste
+
