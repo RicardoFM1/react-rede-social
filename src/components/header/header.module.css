@@ -30,7 +30,7 @@
     font-size: 16px;
 }
 .botoesHeader{
-  margin-right: 100px;
+  margin-right: 5%;
   display: flex;
   gap: 40px;
 }
