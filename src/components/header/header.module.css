@@ -1,65 +1,98 @@
-
 .Titulo {
   padding: 10px 20px 10px 20px;
   font-size: 32px;
   margin-left: 50px;
 }
 .header {
+  max-height: 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 .tituloDiv {
   display: flex;
   align-items: center;
+  
 }
 
 .Pesquisa {
-    padding: 20px 400px 20px 48px;
-    min-height: 10px;
-    max-height: 10px;
-    margin-right: 200px;
-    border-bottom: none;
-    border-top: none;
-    border-left: 2px solid rgba(128, 128, 128, 0.707);
-    border-right: 2px solid rgba(128, 128, 128, 0.707);
-    outline: none;
-    font-size: 16px;
+  padding: 20px 400px 20px 48px;
+  min-height: 10px;
+  max-height: 10px;
+  margin-right: 200px;
+  border-bottom: none;
+  border-top: none;
+  border-left: 2px solid rgba(128, 128, 128, 0.707);
+  border-right: 2px solid rgba(128, 128, 128, 0.707);
+  outline: none;
+  font-size: 16px;
 }
-.botoesHeader{
+.Pesquisa:focus {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.botoesHeader {
   margin-right: 5%;
   display: flex;
   gap: 40px;
 }
-.btnUser{
-  background-color: rgba(0, 0, 255, 0.825);
-  transition: all 0.5s ease
+.btnUser {
+  /* background-color: rgba(0, 0, 255, 0.825); */
+  transition: all 0.5s ease;
+}
+.iconCriar{
+  background: rgba(128, 128, 128, 0.707);
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border-radius: 16px;
+}
+.iconUsuario{
+  background: blue;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border-radius: 16px;
+}
+.iconMensagem{
+  background: rgba(128, 128, 128, 0.707);
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border-radius: 16px;
+}
+.iconConfiguracoes{
+  background: rgba(128, 128, 128, 0.707);
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border-radius: 16px;
 }
 button {
-  padding: 2px;
-  height: 50%;
-  width: 50px;
-  background-color: rgba(148, 148, 148, 0.897);
+  padding: 2px 10px 2px 10px;
   border: none;
   cursor: pointer;
   transition: all 0.5s ease;
   border-radius: 12px;
+  background-color: transparent;
 }
-button:hover{
+button:hover {
   background-color: rgba(99, 99, 99, 0.722);
-  transform: scale(1.05)
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.btnUser:hover{
+.btnUser:hover {
   background-color: rgba(0, 0, 255, 0.662);
-  transform: scale(1.05)
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.IconPesquisa{
+.IconPesquisa {
   color: rgb(99, 99, 100);
   position: absolute;
   left: 15%;
 }
-
-
