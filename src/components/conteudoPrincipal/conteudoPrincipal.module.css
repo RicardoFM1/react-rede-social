@@ -1,14 +1,20 @@
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: auto;
+    min-height: 100%;
+}
 .divPrincipal{
     background-color: rgb(196, 196, 196);
     width: 100vw;
-    height: 120vh;
-    margin-bottom: 100px;
+    min-height: 97vh;
     display: flex;
     justify-content: space-between;
     padding: 24px;
 }
-
 .divInfoPerfil{
+    flex: 1;
     background-color: rgb(255, 255, 255);
     width: 51%;
     min-height: 85vh;
@@ -18,22 +24,91 @@
     border-radius: 10px
 }
 .divAgora{
+    flex: 1;
     background-color: rgb(255, 255, 255);
     width: 30vw;
-    height: 85vh;
+    min-height: 85vh;
     position: absolute;
     top: 12%;
     right: 4%;
     border-radius: 10px
 }
-
-body{
-    overflow: hidden;
-}
-h1{
+.divAgora h1{
     padding: 28px;
     font-weight: 900;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-/* saiu o boxshadow do header */
-/* arrumar position da lupa */
+
+.estatisticaPerfil{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    text-align: center;
+}
+.estatisticaPerfil p{
+    font-weight: 900;
+    font-size: 20px;
+}
+.borderDiv{
+    border-right: 1px solid gray;
+    padding-right: 18px;
+    height: 42px;
+}
+.infoPrincipalPerfil{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 140px;
+    margin-top: 28px;
+    margin-right: 80px;
+}
+.infoUsuario{
+    display: flex;
+    flex-direction: column;
+}
+.fotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nomePerfil{
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px
+}
+.nomePerfil p{
+    color: gray;
+    font-weight: 300;
+    font-size: 20px
+}
+.tituloSobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 100px;
+    padding: 0 48px 0 48px;
+}
+.Sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 18px;
+    max-height: 200px;
+    overflow: auto;
+    max-width: 100%;
+    padding: 0 48px 0 48px;
+    word-break: break-all;
+    font-size: 18px;
+}
+.tituloScript{
+    padding: 0 48px 0 48px;
+    margin-top: 68px;
+}
+.Scripts{
+    display: flex;
+    padding: 0 48px 0 48px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+/* mudar as divs para display flex, ver com o sor oq ele tinha feito. */
+/* div de fundo não acompanha o scroll. */
