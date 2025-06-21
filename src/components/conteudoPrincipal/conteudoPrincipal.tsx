@@ -1,5 +1,4 @@
 import style from "./conteudoPrincipal.module.css";
-import { Iconify } from "../iconify/iconify";
 export const ConteudoPrincipal = () => {
   return (
     <main>
@@ -30,6 +29,7 @@ export const ConteudoPrincipal = () => {
                 </div>
                 <p>@juu_librarian</p>
               </div>
+              
             </div>
           </div>
           <div className={style.tituloSobre}>
@@ -87,54 +87,7 @@ export const ConteudoPrincipal = () => {
             <h2>Scripts recentes</h2>
           </div>
           <div className={style.Scripts}>
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-                        ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-                        ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
-            ddddddddddddddd
+
 
           </div>
         </div>

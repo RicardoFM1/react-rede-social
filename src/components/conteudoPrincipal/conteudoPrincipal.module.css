@@ -7,30 +7,21 @@ body{
 }
 .divPrincipal{
     background-color: rgb(196, 196, 196);
-    width: 100vw;
-    min-height: 97vh;
     display: flex;
     justify-content: space-between;
     padding: 24px;
 }
 .divInfoPerfil{
-    flex: 1;
     background-color: rgb(255, 255, 255);
-    width: 51%;
+    width: 55%;
     min-height: 85vh;
-    position: absolute;
-    top: 12%;
-    left: 2%;
     border-radius: 10px
 }
 .divAgora{
-    flex: 1;
+    
     background-color: rgb(255, 255, 255);
-    width: 30vw;
+    width: 30%;
     min-height: 85vh;
-    position: absolute;
-    top: 12%;
-    right: 4%;
     border-radius: 10px
 }
 .divAgora h1{
