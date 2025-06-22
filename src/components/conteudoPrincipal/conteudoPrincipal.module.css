@@ -84,7 +84,6 @@ body{
     justify-content: flex-start;
     margin-top: 18px;
     max-height: 200px;
-    overflow: auto;
     max-width: 100%;
     padding: 0 48px 0 48px;
     word-break: break-all;
@@ -98,8 +97,22 @@ body{
     display: flex;
     padding: 0 48px 0 48px;
     margin-top: 18px;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
 }
-
-/* mudar as divs para display flex, ver com o sor oq ele tinha feito. */
-/* div de fundo não acompanha o scroll. */
+.Scripts div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-height: 100px;
+    max-width: 250px;
+    padding: 10px;
+    margin: 0 0 18px 0;
+    border-left: 3px solid red;
+    
+}
+.IconScript1{
+    margin: 0 10px 0 0;
+}
+.IconScript2{
+    margin: 0 0 0 10px;
+}
