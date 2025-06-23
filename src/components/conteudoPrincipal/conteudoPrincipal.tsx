@@ -32,6 +32,19 @@ export const ConteudoPrincipal = () => {
                 </div>
                 <p>@juu_librarian</p>
               </div>
+              <div className={style.BtnInfoPerfil}>
+                <button className={style.BtnInfoPerfil1}>C</button>
+                <button className={style.BtnInfoPerfil2}>H</button>
+                <button className={style.BtnInfoPerfil3}>P</button>
+                <button className={style.BtnInfoPerfilIconify}>
+                  <Iconify
+                    icon="fa-solid:plus"
+                    color="White"
+                    backgroundColor="gray"
+                    ClassName={style.iconCriar}
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div className={style.tituloSobre}>

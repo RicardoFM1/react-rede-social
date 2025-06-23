@@ -55,6 +55,7 @@ body{
 .infoUsuario{
     display: flex;
     flex-direction: column;
+    margin-top: 42px;
 }
 .fotoPerfil{
     display: flex;
@@ -115,4 +116,36 @@ body{
 }
 .IconScript2{
     margin: 0 0 0 10px;
+}
+.BtnInfoPerfil{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+
+}
+.BtnInfoPerfil button{
+    border: none;
+    cursor: pointer;
+    min-height: 32px;
+    min-width: 32px;
+    border-radius: 10px;
+}
+.BtnInfoPerfil1{
+    background-color: red;
+    color: white;
+}
+.BtnInfoPerfil2{
+    background-color: yellow;
+    color: black;
+}
+.BtnInfoPerfil3{
+    background-color: green;
+    color: white;
+}
+.iconCriar{
+  background: rgba(128, 128, 128, 0.707);
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border-radius: 16px;
 }
