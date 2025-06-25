@@ -124,7 +124,8 @@ export const ConteudoPrincipal = () => {
         </div>
 
         <div className={style.divAgora}>
-          <h1>Agora...</h1>
+          
+          <Feed />
         </div>
       </div>
     </main>

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react"
 import { apiController } from "../../controller/api.controller"
-import { useNavigate } from "react-router-dom"
 import type { iPosts, Post } from "../../schemas/posts.schemas"
+import { useNavigate } from "react-router-dom"
 
 interface FeedProps {
     idUsuario?: string
 }
 
 export const Feed=({idUsuario}:FeedProps)=>{
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     const [posts,setPosts] = useState([] as iPosts)
     const [loading,setLoading] = useState(true)
     const goToPerfil = (post:Post) => {
         console.log(post,"post")
-        navigate(`/usuario/${post.usuario.id}`)
+        // navigate(`/usuario/${post.usuario.id}`)
     }
     const getPosts = async()=>{
         setLoading(true)
