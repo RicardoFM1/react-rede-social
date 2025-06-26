@@ -1,0 +1,29 @@
+.pNadaDeNovo{
+    text-align: center; 
+    justify-content: center;
+}
+ul{
+    list-style: none;
+}
+.pNomeEFoto{
+    text-align: center;
+    font-size: 28px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.pConteudo{
+    padding: 14px 0 0 38px;
+    max-width: 400px;
+    max-height: 400px;
+}
+.divUl{
+    border-bottom: 2px solid gray;
+    margin: 0 28px 0 28px;
+}
+.fotoPerfilAgora img{
+    height: 48px;
+    width: 48px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
