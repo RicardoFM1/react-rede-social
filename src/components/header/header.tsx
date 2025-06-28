@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Iconify } from "../iconify/iconify";
 import style from "./header.module.css";
 export const Header = () => {
@@ -28,10 +29,12 @@ export const Header = () => {
           <Iconify icon="lets-icons:message-alt-fill" color="White" ClassName={style.iconMensagem} />
           Mensagens
         </button>
-        <button>
+        <Link to={"/configuracoes"}>
+        
           <Iconify icon="material-symbols:settings-outline" color="White" ClassName={style.iconConfiguracoes} />
           Configurações
-        </button>
+        </Link>
+        
       </div>
     </header>
   );

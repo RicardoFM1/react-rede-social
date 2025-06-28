@@ -39,6 +39,7 @@ export const Feed = ({ idUsuario }: FeedProps) => {
   };
   useEffect(() => {
     getPosts();
+    console.log("UseEffectDoFeed")
   }, []);
   return (
     <section>
@@ -51,10 +52,11 @@ export const Feed = ({ idUsuario }: FeedProps) => {
             return (
               <li key={post.id} onClick={() => goToPerfil(post)}>
                 <div className={style.divUl}>
-                 
-                  <p className={style.pNomeEFoto}> <div className={style.fotoPerfilAgora}>
+                  <p className={style.pNomeEFoto}></p>
+                     <div className={style.fotoPerfilAgora}>
                 <img src="./image.png" alt="Imagem usuário" />
-                  </div>{post.usuario.name}</p>
+                  </div>
+                  {post.usuario.name}
                   <p className={style.pConteudo}>{post.content}</p>
                 </div>
               </li>

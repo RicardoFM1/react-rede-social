@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
 import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
 
 export const ConteudoPrincipal = () => {
+  const [dado,setDado]=useState(0)
+
+  useEffect(()=>{
+console.log("UseEffectDoCounteudo")
+  
+  },[dado])
+  useEffect(()=>{
+   
+    setInterval(() => {
+      let aux = dado+1
+    setDado(aux)
+    }, 1000);
+
+  },[])
   return (
     <main>
       <div className={style.divPrincipal}>

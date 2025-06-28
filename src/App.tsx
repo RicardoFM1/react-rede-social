@@ -10,6 +10,7 @@ function App() {
   <Header />
   <ConteudoPrincipal /> 
   </>
+  // retornar as rotas 
   
     
   
