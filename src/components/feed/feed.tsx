@@ -50,16 +50,15 @@ export const Feed = ({ idUsuario }: FeedProps) => {
         <ul>
           {posts.map((post) => {
             return (
+                <div className={style.divLi}>
               <li key={post.id} onClick={() => goToPerfil(post)}>
-                <div className={style.divUl}>
-                  <p className={style.pNomeEFoto}></p>
-                     <div className={style.fotoPerfilAgora}>
-                <img src="./image.png" alt="Imagem usuário" />
-                  </div>
-                  {post.usuario.name}
-                  <p className={style.pConteudo}>{post.content}</p>
+                <div className={style.TopoFeed}>
+                  <img src="./image.png" alt="Imagem usuário" />
+                  <p>{post.usuario.name}</p>
                 </div>
+                  <p className={style.pConteudo}>{post.content}</p>
               </li>
+                </div>
             );
           })}
         </ul>

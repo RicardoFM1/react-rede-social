@@ -17,19 +17,19 @@ export const Header = () => {
         />
       </div>
       <div className={style.botoesHeader}>
-        <button>
-          <Iconify icon="fa-solid:plus" color="White" ClassName={style.iconCriar}/>
-          Criar
-        </button>
-        <button className={style.btnUser}>
+        <Link to={"/login"} className={style.Links}>
+          <Iconify icon="solar:login-2-bold" color="White" ClassName={style.iconLogin}/>
+          Login
+        </Link>
+        <Link to={"/cadastro"} className={style.userCadastro}>
           <Iconify icon="heroicons:user-solid" color="White" ClassName={style.iconUsuario}/>
-          Usuário
-        </button>
-        <button>
+          Cadastrar-se
+        </Link>
+        <Link to={"/mensagens"} className={style.Links}>
           <Iconify icon="lets-icons:message-alt-fill" color="White" ClassName={style.iconMensagem} />
           Mensagens
-        </button>
-        <Link to={"/configuracoes"}>
+        </Link>
+        <Link to={"/configuracoes"} className={style.Links}>
         
           <Iconify icon="material-symbols:settings-outline" color="White" ClassName={style.iconConfiguracoes} />
           Configurações

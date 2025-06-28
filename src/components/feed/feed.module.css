@@ -5,25 +5,23 @@
 ul{
     list-style: none;
 }
-.pNomeEFoto{
-    text-align: center;
-    font-size: 28px;
+.TopoFeed{
     display: flex;
+    font-size: 28px; 
     margin-top: 30px;
 }
-
+.TopoFeed img{
+    height: 54px;
+    width: 54px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 .pConteudo{
     padding: 14px 0 28px 38px;
     max-width: 400px;
     max-height: 400px;
 }
-.divUl{
+.divLi{
     border-bottom: 2px solid gray;
     margin: 0 28px 0 28px;
-}
-.fotoPerfilAgora img{
-    height: 48px;
-    width: 48px;
-    margin-right: 20px;
-    margin-left: 20px;
 }

@@ -1,16 +1,14 @@
 import "./App.module.css"
-import { ConteudoPrincipal } from "./components/conteudoPrincipal/conteudoPrincipal"
-import { Header } from "./components/header/header"
+import { RotasPrincipal } from "./routes/routes"
 
 
 function App() {
 
 
   return  <>
-  <Header />
-  <ConteudoPrincipal /> 
+  <RotasPrincipal/>
   </>
-  // retornar as rotas 
+
   
     
   
