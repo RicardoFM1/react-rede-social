@@ -3,3 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --Tema-color1: rgb(88, 88, 88);
+  --Tema-color2: White;
+}

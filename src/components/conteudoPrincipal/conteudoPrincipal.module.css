@@ -150,3 +150,21 @@ body{
   padding: 4px;
   border-radius: 16px;
 }
+@media(max-width:600px){
+  .divPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .divInfoPerfil{
+    display: flex;
+   flex-wrap: wrap;
+  }
+  .divAgora{
+    display: flex;
+   flex-wrap: wrap;
+  }
+  .infoPrincipalPerfil{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

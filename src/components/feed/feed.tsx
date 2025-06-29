@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { apiController } from "../../controller/api.controller";
 import type { iPosts, Post } from "../../schemas/posts.schemas";
 import style from "./feed.module.css";
-import { Iconify } from "../iconify/iconify";
+
 
 interface FeedProps {
   idUsuario?: string;

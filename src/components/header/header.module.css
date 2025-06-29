@@ -103,3 +103,14 @@
   position: absolute;
   left: 15%;
 }
+@media(max-width:600px){
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50%;
+  }
+  .botoesHeader{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

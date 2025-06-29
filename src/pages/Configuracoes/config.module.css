@@ -1,0 +1,11 @@
+.Tema-Escuro{
+    background-color: var(--Tema-color1);
+    color: white;
+}
+.Tema-Claro{
+    background-color: var(--Tema-color2);   
+}
+.BtnTema{
+    border: none;
+    cursor: pointer;
+}
