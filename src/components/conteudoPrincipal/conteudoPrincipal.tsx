@@ -23,7 +23,7 @@ console.log("UseEffectDoCounteudo")
 
   },[])
   return <>
-  <div className={style[Tema]}>
+  <div className={style[Tema]}> // -- tentar colocar as classes na main ao invés da div
 
     <main>
       <div className={style.divPrincipal}>
