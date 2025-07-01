@@ -10,12 +10,17 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 24px;
+    background-color: var(--bg-color);
+}
+.divPrincipal {
+   
 }
 .divInfoPerfil{
     background-color: rgb(255, 255, 255);
     width: 55%;
     min-height: 85vh;
-    border-radius: 10px
+    border-radius: 10px;
+
 }
 .divAgora{
     
@@ -182,5 +187,6 @@ body{
 }
 .Tema-Claro{
     background-color: var(--Tema-color2);
-    height: 100vh;   
+    height: 100vh;  
+    color: black; 
 }

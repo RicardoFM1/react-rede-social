@@ -25,4 +25,4 @@ export const Config = () => {
     </div>
   );
 };
-// como eu faria para usar console.log() e o useContext, faria sentido?
+

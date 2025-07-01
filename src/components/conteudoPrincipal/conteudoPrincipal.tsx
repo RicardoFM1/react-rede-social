@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
+import { Theme } from "../../Context/context";
 
 export const ConteudoPrincipal = () => {
-  const TemaLocal = localStorage.getItem("Tema")
-  const Tema = "Tema-" + TemaLocal
-  console.log(Tema)
+  const Cores = useContext(Theme);
+  console.log(Cores)
+  const Tema = "Tema-" + Cores
   const [dado,setDado]=useState(0)
 
   useEffect(()=>{
@@ -26,7 +27,7 @@ console.log("UseEffectDoCounteudo")
 
     <main>
       <div className={style.divPrincipal}>
-        <div className={style.divInfoPerfil}>
+        <div className={style.divInfoPerfil + style[Tema]}>
           <div className={style.infoPrincipalPerfil}>
             <div className={style.fotoPerfil}>
               <img src="./image.png" alt="Imagem usuário" />
