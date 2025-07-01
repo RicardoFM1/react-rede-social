@@ -6,15 +6,18 @@ export const Header = () => {
     <header className={style.header}>
       <div className={style.tituloDiv}>
         <h1 className={style.Titulo}>The Script</h1>
+        <fieldset>
+        
         <Iconify
           icon="lets-icons:search-light"
           ClassName={style.IconPesquisa}
-        />
+          />
         <input
           className={style.Pesquisa}
           type="text"
           placeholder="Pesquise um perfil..."
-        />
+          />
+          </fieldset>
       </div>
       <div className={style.botoesHeader}>
         <Link to={"/login"} className={style.Links}>

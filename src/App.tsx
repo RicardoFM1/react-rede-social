@@ -5,11 +5,14 @@ import { RotasPrincipal } from "./routes/routes"
 
 
 function App() {
-const ThemeColor = "Escuro"
-
+let ThemeColor = "Claro"
+const LocalColors = localStorage.getItem("Tema")
+if(LocalColors){
+  ThemeColor = LocalColors
+}
   return  <>
   <Theme value={ThemeColor}>
-  <RotasPrincipal/>
+  <RotasPrincipal/> 
   </Theme>
   </>
 

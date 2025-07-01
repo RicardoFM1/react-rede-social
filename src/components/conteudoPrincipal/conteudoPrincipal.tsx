@@ -4,6 +4,9 @@ import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
 
 export const ConteudoPrincipal = () => {
+  const TemaLocal = localStorage.getItem("Tema")
+  const Tema = "Tema-" + TemaLocal
+  console.log(Tema)
   const [dado,setDado]=useState(0)
 
   useEffect(()=>{
@@ -18,7 +21,9 @@ console.log("UseEffectDoCounteudo")
     }, 1000);
 
   },[])
-  return (
+  return <>
+  <div className={style[Tema]}>
+
     <main>
       <div className={style.divPrincipal}>
         <div className={style.divInfoPerfil}>
@@ -57,7 +62,7 @@ console.log("UseEffectDoCounteudo")
                     color="White"
                     backgroundColor="gray"
                     ClassName={style.iconCriar}
-                  />
+                    />
                 </button>
               </div>
             </div>
@@ -91,7 +96,7 @@ console.log("UseEffectDoCounteudo")
                 icon="vaadin:quote-left"
                 color="gray"
                 ClassName={style.IconScript1}
-              />
+                />
             
 
               testando testando testando testando testando testando testando
@@ -104,14 +109,14 @@ console.log("UseEffectDoCounteudo")
                 icon="vaadin:quote-right"
                 color="gray"
                 ClassName={style.IconScript2}
-              />
+                />
             </div>
             <div>
               <Iconify
                 icon="vaadin:quote-left"
                 color="gray"
                 ClassName={style.IconScript1}
-              />
+                />
               testando2 testando2 testando2 testando2 testando2 testando2
               testando2 testando2 testando2 testando2 testando2 testando2
               testando2 testando2 testando2 testando2 testando2 testando2
@@ -120,14 +125,14 @@ console.log("UseEffectDoCounteudo")
                 icon="vaadin:quote-right"
                 color="gray"
                 ClassName={style.IconScript2}
-              />
+                />
             </div>
             <div>
               <Iconify
                 icon="vaadin:quote-left"
                 color="gray"
                 ClassName={style.IconScript1}
-              />
+                />
               test
               
               ando3 testando3 testando3 testando3 testando3 testando3
@@ -145,7 +150,7 @@ console.log("UseEffectDoCounteudo")
                 icon="vaadin:quote-right"
                 color="gray"
                 ClassName={style.IconScript2}
-              />
+                />
             </div>
           </div>
         </div>
@@ -156,5 +161,7 @@ console.log("UseEffectDoCounteudo")
         </div>
       </div>
     </main>
-  );
+    </div>
+    </>
+
 };
