@@ -6,15 +6,13 @@ body{
     min-height: 100%;
 }
 .divPrincipal{
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(170, 110, 110);
     display: flex;
     justify-content: space-between;
     padding: 24px;
     background-color: var(--bg-color);
 }
-.divPrincipal {
-   
-}
+
 .divInfoPerfil{
     background-color: rgb(255, 255, 255);
     width: 55%;
@@ -183,10 +181,10 @@ body{
 .Tema-Escuro{
     background-color: var(--Tema-color1);
     color: white;
-    height: 100vh;
+    min-height: 110vh;
 }
 .Tema-Claro{
     background-color: var(--Tema-color2);
-    height: 100vh;  
+    min-height: 110vh;  
     color: black; 
 }

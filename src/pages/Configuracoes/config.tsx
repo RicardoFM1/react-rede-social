@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 export const Config = () => {
   const Cores = useContext(Theme);
-  let [corTema, setCorTema] = useState(Cores); // TIRAR
-  const className = "Tema-" + corTema; // mudar para: const className = "Tema-" + Cores
+  let [corTema, setCorTema] = useState(Cores); 
+  localStorage.setItem("Tema", corTema);
+  const className = "Tema-" + corTema; 
   console.log(className);
   return (
     <div className={style[className]}>
       <button
         className={style.BtnTema}
         onClick={() => {
-          localStorage.setItem("Tema", corTema); // .setItem("Tema", Cores)
-          setCorTema(corTema === "Claro" ? "Escuro" : "Claro"); // TIRAR
+          setCorTema(corTema === "Claro" ? "Escuro" : "Claro"); 
         }}
       >
         Mudar tema

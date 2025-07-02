@@ -23,11 +23,11 @@ console.log("UseEffectDoCounteudo")
 
   },[])
   return <>
-  <div className={style[Tema]}> // -- tentar colocar as classes na main ao invés da div
+  <div> 
 
     <main>
       <div className={style.divPrincipal}>
-        <div className={style.divInfoPerfil + style[Tema]}>
+        <div className={style[Tema]}>
           <div className={style.infoPrincipalPerfil}>
             <div className={style.fotoPerfil}>
               <img src="./image.png" alt="Imagem usuário" />
