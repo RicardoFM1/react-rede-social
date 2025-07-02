@@ -166,3 +166,4 @@ console.log("UseEffectDoCounteudo")
     </>
 
 };
+// buga a classe quando concatena elas
