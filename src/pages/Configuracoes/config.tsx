@@ -21,7 +21,7 @@ export const Config = () => {
       </button>
       <p>Tema: {corTema} </p>
       <h1>Configurações</h1>
-      <Link to={"/"}>Voltar</Link>
+      <a href="/">Voltar</a>
     </div>
   );
 };

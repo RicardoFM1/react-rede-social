@@ -6,28 +6,38 @@ import { Theme } from "../../Context/context";
 
 export const ConteudoPrincipal = () => {
   const Cores = useContext(Theme);
+  const CoresJS = Cores === "Escuro" ? "Escuro" : "Claro"
   console.log(Cores)
-  const Tema = "Tema-" + Cores
-  const [dado,setDado]=useState(0)
+  const classeDivInfoPerfil = "divInfoPerfil"
+  const ClasseDivICores = `${classeDivInfoPerfil}-${CoresJS}`
+  console.log(ClasseDivICores)
+  const ClasseDivAgora = "divAgora"
+  const classeDivAgoraCores = `${ClasseDivAgora}-${CoresJS}`   
+  const IconScript1 = "IconScript1"
+  const IconScript1Cor = `${IconScript1}-${CoresJS}`
 
-  useEffect(()=>{
-console.log("UseEffectDoCounteudo")
+  // const Tema = "Tema-" + Cores
+
+  // const [dado,setDado]=useState(0)
+
+//   useEffect(()=>{
+// console.log("UseEffectDoCounteudo")
   
-  },[dado])
-  useEffect(()=>{
+//   },[dado])
+//   useEffect(()=>{
    
-    setInterval(() => {
-      let aux = dado+1
-    setDado(aux)
-    }, 1000);
+//     setInterval(() => {
+//       let aux = dado+1
+//     setDado(aux)
+//     }, 1000);
 
-  },[])
+//   },[])
   return <>
   <div> 
 
     <main>
       <div className={style.divPrincipal}>
-        <div className={style[Tema]}>
+        <div className={style[ClasseDivICores]}>
           <div className={style.infoPrincipalPerfil}>
             <div className={style.fotoPerfil}>
               <img src="./image.png" alt="Imagem usuário" />
@@ -156,7 +166,7 @@ console.log("UseEffectDoCounteudo")
           </div>
         </div>
 
-        <div className={style.divAgora}>
+        <div className={style[classeDivAgoraCores]}>
           <h1>Agora...</h1>
           <Feed />
         </div>
@@ -166,4 +176,4 @@ console.log("UseEffectDoCounteudo")
     </>
 
 };
-// buga a classe quando concatena elas
+// ver sobre responsibilidade

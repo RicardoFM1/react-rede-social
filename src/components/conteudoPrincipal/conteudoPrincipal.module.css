@@ -6,26 +6,41 @@ body{
     min-height: 100%;
 }
 .divPrincipal{
-    background-color: rgb(170, 110, 110);
+    background-color: rgb(163, 98, 98);
     display: flex;
     justify-content: space-between;
     padding: 24px;
-    background-color: var(--bg-color);
 }
 
-.divInfoPerfil{
-    background-color: rgb(255, 255, 255);
+
+.divInfoPerfil-Claro{
+    background-color: var(--Tema-color2);
     width: 55%;
     min-height: 85vh;
     border-radius: 10px;
-
+    color: black;
 }
-.divAgora{
-    
-    background-color: rgb(255, 255, 255);
+.divInfoPerfil-Escuro{
+    background-color: var(--Tema-color1);
+    width: 55%;
+    min-height: 85vh;
+    border-radius: 10px;
+    color: white;
+}
+
+.divAgora-Claro{
+    background-color: var(--Tema-color2);
     width: 40%;
     min-height: 85vh;
-    border-radius: 10px
+    border-radius: 10px;
+    color: black;
+}
+.divAgora-Escuro{
+    background-color: var(--Tema-color1);
+    width: 40%;
+    min-height: 85vh;
+    border-radius: 10px;
+    color: white;
 }
 .divAgora h1{
     padding: 38px 0 0 38px;
