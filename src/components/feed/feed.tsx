@@ -44,7 +44,7 @@ export const Feed = ({ idUsuario }: FeedProps) => {
   }, []);
   return (
     <section>
-      {loading && <p>Carregando</p>}
+      {loading && <p className={style.pCarregando}>Carregando</p>}
       {posts.length === 0 && !loading ? (
         <p className={style.pNadaDeNovo}>Nada de novo aqui</p>
       ) : (

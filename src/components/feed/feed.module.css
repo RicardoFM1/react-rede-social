@@ -1,29 +1,35 @@
-.pNadaDeNovo{
-    text-align: center; 
-    justify-content: center;
+.pNadaDeNovo {
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
 }
-ul{
-    list-style: none;
+.pCarregando {
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px; 
 }
-.TopoFeed{
-    display: flex;
-    font-size: 28px; 
-    margin-top: 30px;
+ul {
+  list-style: none;
 }
-.topoFeedIcon{
-    height: 54px;
-    width: 54px;
-    margin-right: 20px;
-    margin-left: 20px;
-    border: 1px solid black;
-    border-radius: 100px;
+.TopoFeed {
+  display: flex;
+  font-size: 28px;
+  margin-top: 30px;
 }
-.pConteudo{
-    padding: 28px 0 28px 38px;
-    max-width: 400px;
-    max-height: 400px;
+.topoFeedIcon {
+  height: 54px;
+  width: 54px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 100px;
 }
-.divLi{
-    border-bottom: 2px solid gray;
-    margin: 0 28px 0 28px;
+.pConteudo {
+  padding: 28px 0 28px 38px;
+  max-width: 400px;
+  max-height: 400px;
+}
+.divLi {
+  border-bottom: 2px solid gray;
+  margin: 0 28px 0 28px;
 }
