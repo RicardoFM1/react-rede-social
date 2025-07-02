@@ -42,11 +42,16 @@ body{
     border-radius: 10px;
     color: white;
 }
-.divAgora h1{
+.divAgora-Escuro h1, .divAgora-Claro h1{
     padding: 38px 0 0 38px;
     font-weight: 900;
 }
-
+.IconPerfil{
+    height: 200px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 100px;
+}
 .estatisticaPerfil{
     display: flex;
     flex-direction: row;

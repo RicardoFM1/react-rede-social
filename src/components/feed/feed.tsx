@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { apiController } from "../../controller/api.controller";
 import type { iPosts, Post } from "../../schemas/posts.schemas";
 import style from "./feed.module.css";
+import { Iconify } from "../iconify/iconify";
 
 
 interface FeedProps {
@@ -53,7 +54,8 @@ export const Feed = ({ idUsuario }: FeedProps) => {
                 <div className={style.divLi}>
               <li key={post.id} onClick={() => goToPerfil(post)}>
                 <div className={style.TopoFeed}>
-                  <img src="./image.png" alt="Imagem usuário" />
+                <Iconify icon="heroicons:user-solid" ClassName={style.topoFeedIcon}
+                 />
                   <p>{post.usuario.name}</p>
                 </div>
                   <p className={style.pConteudo}>{post.content}</p>

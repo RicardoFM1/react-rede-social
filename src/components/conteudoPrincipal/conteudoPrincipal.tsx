@@ -42,7 +42,8 @@ export const ConteudoPrincipal = () => {
         <div className={style[ClasseDivICores]}>
           <div className={style.infoPrincipalPerfil}>
             <div className={style.fotoPerfil}>
-              <img src="./image.png" alt="Imagem usuário" />
+              <Iconify icon="heroicons:user-solid" ClassName={style.IconPerfil}
+              />
             </div>
             <div className={style.infoUsuario}>
               <div className={style.estatisticaPerfil}>

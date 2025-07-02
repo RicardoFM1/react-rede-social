@@ -10,14 +10,16 @@ ul{
     font-size: 28px; 
     margin-top: 30px;
 }
-.TopoFeed img{
+.topoFeedIcon{
     height: 54px;
     width: 54px;
     margin-right: 20px;
     margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 100px;
 }
 .pConteudo{
-    padding: 14px 0 28px 38px;
+    padding: 28px 0 28px 38px;
     max-width: 400px;
     max-height: 400px;
 }
