@@ -132,12 +132,23 @@ body{
     overflow: hidden;
     
 }
-.IconScript1{
+.IconScript1-Claro{
+    margin: 0 5px 0 0;
+    color: black;
+}
+.IconScript2-Claro{
+    margin: 0  0 0 10px;
+    color: black;
+}
+.IconScript1-Escuro{
     margin: 0 10px 0 0;
+    color: white;
 }
-.IconScript2{
+.IconScript2-Escuro{
     margin: 0 0 0 10px;
+    color: white;
 }
+
 .BtnInfoPerfil{
     display: flex;
     justify-content: space-between;

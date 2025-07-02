@@ -15,6 +15,8 @@ export const ConteudoPrincipal = () => {
   const classeDivAgoraCores = `${ClasseDivAgora}-${CoresJS}`   
   const IconScript1 = "IconScript1"
   const IconScript1Cor = `${IconScript1}-${CoresJS}`
+    const IconScript2 = "IconScript2"
+  const IconScript2Cor = `${IconScript2}-${CoresJS}`
 
   // const Tema = "Tema-" + Cores
 
@@ -105,8 +107,7 @@ export const ConteudoPrincipal = () => {
             <div>
               <Iconify
                 icon="vaadin:quote-left"
-                color="gray"
-                ClassName={style.IconScript1}
+                ClassName={style[IconScript1Cor]}
                 />
             
 
@@ -117,16 +118,14 @@ export const ConteudoPrincipal = () => {
               testando testando testando testando testando testando testando
               
               <Iconify
-                icon="vaadin:quote-right"
-                color="gray"
-                ClassName={style.IconScript2}
+              icon="vaadin:quote-right"
+                ClassName={style[IconScript2Cor]}
                 />
             </div>
             <div>
               <Iconify
                 icon="vaadin:quote-left"
-                color="gray"
-                ClassName={style.IconScript1}
+                ClassName={style[IconScript1Cor]}
                 />
               testando2 testando2 testando2 testando2 testando2 testando2
               testando2 testando2 testando2 testando2 testando2 testando2
@@ -134,15 +133,13 @@ export const ConteudoPrincipal = () => {
               testando2 testando2 testando2
               <Iconify
                 icon="vaadin:quote-right"
-                color="gray"
-                ClassName={style.IconScript2}
+                ClassName={style[IconScript2Cor]}
                 />
             </div>
             <div>
               <Iconify
                 icon="vaadin:quote-left"
-                color="gray"
-                ClassName={style.IconScript1}
+                ClassName={style[IconScript1Cor]}
                 />
               test
               
@@ -159,8 +156,7 @@ export const ConteudoPrincipal = () => {
               ando3 testando3
               <Iconify
                 icon="vaadin:quote-right"
-                color="gray"
-                ClassName={style.IconScript2}
+                ClassName={style[IconScript2Cor]}
                 />
             </div>
           </div>
