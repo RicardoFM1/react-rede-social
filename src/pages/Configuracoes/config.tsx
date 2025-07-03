@@ -1,14 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Theme } from "../../Context/context";
 import style from "./config.module.css";
 import { Link } from "react-router-dom";
 
 export const Config = () => {
-  const Cores = useContext(Theme);
-  let [corTema, setCorTema] = useState(Cores); 
+  const {corTema,setCorTema} = useContext(Theme);
   localStorage.setItem("Tema", corTema);
   const className = "Tema-" + corTema; 
-  console.log(className);
+  console.log(className,"aki");
   return (
     <div className={style[className]}>
       <button

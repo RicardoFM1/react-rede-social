@@ -6,7 +6,7 @@ body{
     min-height: 100%;
 }
 .divPrincipal{
-    background-color: rgb(163, 98, 98);
+    background-color: rgb(155, 154, 154);
     display: flex;
     justify-content: space-between;
     padding: 24px;

@@ -4,8 +4,8 @@ import style from "./header.module.css";
 import { useContext } from "react";
 import { Theme } from "../../Context/context";
 export const Header = () => {
-  const Cores = useContext(Theme)
-  const CoresJS = Cores === "Escuro" ? "Escuro" : "Claro"
+  const {corTema} = useContext(Theme)
+  const CoresJS = corTema //=== "Escuro" ? "Escuro" : "Claro"
   const Header = "Header"
   const HeaderCores = `${Header}-${CoresJS}`
   const Pesquisa = "Pesquisa"

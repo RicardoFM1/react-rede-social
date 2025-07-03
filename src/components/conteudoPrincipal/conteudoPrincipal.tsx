@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
 import { Theme } from "../../Context/context";
 
 export const ConteudoPrincipal = () => {
-  const Cores = useContext(Theme);
-  const CoresJS = Cores === "Escuro" ? "Escuro" : "Claro"
-  console.log(Cores)
+  const {corTema} = useContext(Theme);
+  const CoresJS = corTema === "Escuro" ? "Escuro" : "Claro"
+  console.log(corTema)
   const classeDivInfoPerfil = "divInfoPerfil"
   const ClasseDivICores = `${classeDivInfoPerfil}-${CoresJS}`
   console.log(ClasseDivICores)

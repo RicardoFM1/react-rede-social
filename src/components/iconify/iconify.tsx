@@ -5,11 +5,10 @@ interface IconifyProps {
     height?:number,
     ClassName?:string,
     color?:string,
-    backgroundColor?:string
+    backgroundColor?:string,
+    onClick?:()=>void
 }
-export const Iconify=({icon, width, height, ClassName, color,backgroundColor, }:IconifyProps)=>{
+export const Iconify=({icon, width, height, ClassName, color,backgroundColor, onClick }:IconifyProps)=>{
     return <Icon icon={icon} width={width??24} height={height??24} className={ClassName??""} color={color??""} 
-    style={{backgroundColor:backgroundColor??""}}
-    
-    />
+    style={{backgroundColor:backgroundColor??""}} onClick={onClick} />
 }
