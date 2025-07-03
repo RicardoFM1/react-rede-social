@@ -3,7 +3,9 @@ import { toast } from "react-toastify"
 import { Header } from "../../components/header/header"
 import { apiController } from "../../controller/api.controller"
 import style from "../login/style.module.css"
+import { useNavigate } from "react-router-dom"
 export const Cadastro=()=>{
+    const navigate = useNavigate()
     const [email,setEmail] = useState("")
     const [pass,setPass] = useState("")
     const [name,setName] = useState("")
@@ -17,8 +19,9 @@ export const Cadastro=()=>{
         }
        const res = await apiController.post("/usuarios",body)
        console.log(res,"res do axios")
-       if(res.data.token){
+       if(res.data){
             toast.success("Sucesso, login")
+            navigate("/login")
        }
         console.log("fazer login", email)
         console.log("fazer login",pass)
