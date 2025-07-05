@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
