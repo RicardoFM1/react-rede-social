@@ -3,16 +3,25 @@ import { Header } from "../../components/header/header"
 import style from "./style.module.css"
 import { apiController } from "../../controller/api.controller"
 import {toast} from "react-toastify"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { createLoginSchema, type iCreateLogin } from "../../schemas/login.schemas"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Input } from "../../components/input/Input"
 import { useContext } from "react"
 import { MainContext } from "../../Context/MainContext"
+import { Theme } from "../../Context/context"
 
 
 export const Login=()=>{
+    const {corTema} = useContext(Theme)
+    const CoresJS = corTema
+    const formulario = "formulario"
+    const formularioCor = `${formulario}-${CoresJS}`
+    const input = "input"
+    const inputCor = `${input}-${CoresJS}`
+    const btnSubmit = "btnSubmit"
+    const btnSubmitCor = `${btnSubmit}-${CoresJS}`
     const navigate = useNavigate()
     const { setUser } = useContext(MainContext)
     
@@ -49,16 +58,17 @@ export const Login=()=>{
     }
     return <>
     <Header/>
+    <Link to={"/"}>VOLTAR</Link>
     
     <main className={style.main}>
-        <form className={style.form} onSubmit={handleSubmit(fazerLogin)}>
-            <Input errorMsg={errors.email&&errors.email.message} 
-            label="E-mail" type="text" placeholder="escreva seu e-mail" register={register("email")}/>
+        <form className={style[formularioCor]} onSubmit={handleSubmit(fazerLogin)}>
+            <Input ClassName={style[inputCor]} errorMsg={errors.email&&errors.email.message} 
+            label="E-mail" type="text" placeholder="Escreva seu e-mail" register={register("email")}/>
            
-            <Input errorMsg={errors.password&&errors.password.message} 
+            <Input ClassName={style[inputCor]} errorMsg={errors.password&&errors.password.message} 
                 label="Senha" type="password" placeholder="****" register={register("password")}
             />
-            <button type="submit">Login</button>
+            <button className={style[btnSubmitCor]} type="submit">Login</button>
         </form>
     </main>
     </>

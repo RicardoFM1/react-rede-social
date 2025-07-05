@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Theme } from "../../Context/context";
 export const Header = () => {
   const {corTema} = useContext(Theme)
-  const CoresJS = corTema //=== "Escuro" ? "Escuro" : "Claro"
+  const CoresJS = corTema
   const Header = "Header"
   const HeaderCores = `${Header}-${CoresJS}`
   const Pesquisa = "Pesquisa"

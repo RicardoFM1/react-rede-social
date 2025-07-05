@@ -6,9 +6,10 @@ interface InputProps {
     type:"text"|"password",
     placeholder:string
     errorMsg?:string
-    register:{}
+    register:{},
+    ClassName?: string
 }
-export const Input = ({label,type,placeholder,errorMsg,register}:InputProps)=>{
+export const Input = ({label,type,placeholder,errorMsg,register,ClassName}:InputProps)=>{
     const [newType,setNewType] = useState("password")
     const changeType = ()=>{
         if(newType === "password"){
@@ -18,15 +19,15 @@ export const Input = ({label,type,placeholder,errorMsg,register}:InputProps)=>{
         }
     }
     return <fieldset className={style.fieldset}>
-        <label htmlFor={label}>{label}</label>
+        <label className={style.label} htmlFor={label}>{label}</label>
         {
             type === "password"?
             <>
-            <input type={newType} {...register} placeholder={placeholder} id={label}/>
+            <input className={ClassName??""} type={newType} {...register} placeholder={placeholder} id={label}/>
             <Iconify onClick={changeType} ClassName={style.icon} icon="ri:eye-line"/>
             </>
         :
-        <input {...register} placeholder={placeholder} type={type} id={label}/>
+        <input className={ClassName??""} {...register} placeholder={placeholder} type={type} id={label}/>
          }
          {errorMsg ? 
                 <span className={style.error}>{errorMsg}</span>
