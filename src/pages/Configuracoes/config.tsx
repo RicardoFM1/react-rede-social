@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Theme } from "../../Context/context";
+import { cores, Theme } from "../../Context/context";
 import style from "./config.module.css";
 import { Link } from "react-router-dom";
 
@@ -13,14 +13,14 @@ export const Config = () => {
       <button
         className={style.BtnTema}
         onClick={() => {
-          setCorTema(corTema === "Claro" ? "Escuro" : "Claro"); 
+          setCorTema(corTema === cores.Escuro ?cores.Claro:  cores.Escuro); 
         }}
       >
         Mudar tema
       </button>
       <p>Tema: {corTema} </p>
       <h1>Configurações</h1>
-      <a href="/">Voltar</a>
+      <Link to={"/"}> Voltar</Link>
     </div>
   );
 };
