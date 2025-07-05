@@ -1,6 +1,6 @@
 
 import { Header } from "../../components/header/header"
-import style from "./style.module.css"
+import style from "../style.module.css"
 import { apiController } from "../../controller/api.controller"
 import {toast} from "react-toastify"
 import { Link, useNavigate } from "react-router-dom"
