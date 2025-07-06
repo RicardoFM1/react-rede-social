@@ -9,6 +9,7 @@ import { createUserSchema, type CreateUser } from "../../schemas/usuario.schemas
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Theme } from "../../Context/context"
 import { useContext } from "react"
+import { Iconify } from "../../components/iconify/iconify"
 export const Cadastro=()=>{
     const {corTema} = useContext(Theme)
     const CoresJS = corTema
@@ -55,9 +56,14 @@ const {
     }
         return <>
     <Header/>
-    <Link to={"/"}>VOLTAR</Link>
+    <div className={style.divVoltar}>
+
+    <Link className={style.linkVoltar} to={"/"}><Iconify icon="tabler:arrow-back" height={48} width={48} color="blue"/></Link>
+    <Link className={style.linkVoltar} to={"/"}>Voltar</Link>
+    </div>
     <main className={style.main}>
         <form className={style[formularioCor]} onSubmit={handleSubmit(registerUser)}>
+        <h1>Cadastro</h1>
             <fieldset>
                 <label htmlFor="name">Nome</label>
                 <input className={style[inputCor]} id="name" type="text" placeholder="Escreva seu nome"

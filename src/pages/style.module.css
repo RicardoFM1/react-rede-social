@@ -9,7 +9,7 @@ body {
 }
 .main {
   width: 100%;
-  min-height: 86vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +30,14 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   animation: InitForm 1.5s linear;
+}
+.formulario-Claro h1 {
+  text-align: center;
+  align-items: center;
+}
+.formulario-Escuro h1{
+ text-align: center;
+  align-items: center;
 }
 .formulario-Escuro {
   width: 90%;
@@ -138,5 +146,16 @@ body {
 }
 .label {
   font-size: 18px;
+  font-weight: 600;
+}
+.divVoltar{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+.linkVoltar{
+  text-decoration: none;
+  color: black;
   font-weight: 600;
 }

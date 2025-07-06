@@ -11,6 +11,7 @@ import { Input } from "../../components/input/Input"
 import { useContext } from "react"
 import { MainContext } from "../../Context/MainContext"
 import { Theme } from "../../Context/context"
+import { Iconify } from "../../components/iconify/iconify"
 
 
 export const Login=()=>{
@@ -58,10 +59,14 @@ export const Login=()=>{
     }
     return <>
     <Header/>
-    <Link to={"/"}>VOLTAR</Link>
-    
+    <div className={style.divVoltar}>
+
+    <Link className={style.linkVoltar} to={"/"}><Iconify icon="tabler:arrow-back" height={48} width={48} color="blue"/></Link>
+    <Link className={style.linkVoltar} to={"/"}>Voltar</Link>
+    </div>
     <main className={style.main}>
         <form className={style[formularioCor]} onSubmit={handleSubmit(fazerLogin)}>
+        <h1>Login</h1>
             <Input ClassName={style[inputCor]} errorMsg={errors.email&&errors.email.message} 
             label="E-mail" type="text" placeholder="Escreva seu e-mail" register={register("email")}/>
            

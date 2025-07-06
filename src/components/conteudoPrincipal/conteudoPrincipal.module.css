@@ -186,54 +186,72 @@ body{
   padding: 4px;
   border-radius: 16px;
 }
-@media(max-width:750px){
+
+@media(max-width:770px){
   .divPrincipal{
     flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
     width: 100%;
   }
   .divInfoPerfil{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
-   .divAgora{
-    display: flex;
-   flex-wrap: wrap;
-   width: 100%;
-  }
+
   .infoPrincipalPerfil{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   } 
   .Sobre{
-    margin-bottom: 50%;
+    margin-bottom: 100px;
+    max-width: 100%;
+    max-height: 50%;
   }
-}
-@media(max-width:600px){
-  .divPrincipal{
+  .Scripts{
     flex-direction: column;
     width: 100%;
+  }
+  .Scripts div{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media(max-width:1100px){
+  .divPrincipal{
+    width: 176%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
   }
   .divInfoPerfil{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
   }
-   .divAgora{
-    display: flex;
-   flex-wrap: wrap;
-   width: 100%;
+   .divAgora-Escuro{
+    max-width: 55%;
+    width: 55%;
+  }
+  .divAgora-Claro{
+    max-width: 55%;
+    width: 55%;
   }
   .infoPrincipalPerfil{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
   } 
-  .Sobre{
-    margin-bottom: 50%;
+  .tituloScript{
+    margin-top: 60px;
   }
 }
+
+
 .Tema-Escuro{
     background-color: var(--Tema-color1);
     color: white;
