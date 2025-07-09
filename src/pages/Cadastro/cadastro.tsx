@@ -46,6 +46,7 @@ const {
                 }
                 console.log("fazer login", userData.email)
                 console.log("fazer login", userData.password)
+                console.log("fazer login", userData.name)
             } catch (error:any) {
                 console.log(error,"error")
                 toast.error(error.response.data.message)

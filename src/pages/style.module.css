@@ -74,6 +74,9 @@ body {
   outline: none;
   transition: all 0.5ms ease;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-Escuro {
   padding: 16px;
@@ -83,6 +86,9 @@ body {
   transition: all 0.5ms ease;
   width: 100%;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input-Claro:focus,
 .input-Escuro:focus {
@@ -119,7 +125,7 @@ body {
   }
   100% {
     position: absolute;
-    bottom: 110px;
+    bottom: 50px;
   }
 }
 .btnSubmit-Claro {
