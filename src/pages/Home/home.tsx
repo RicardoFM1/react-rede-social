@@ -2,7 +2,6 @@ import { Navigate, useNavigate } from "react-router-dom"
 import { ConteudoPrincipal } from "../../components/conteudoPrincipal/conteudoPrincipal"
 import { Header } from "../../components/header/header"
 import { useEffect, useState } from "react"
-import { jwtDecode } from 'jwt-decode'
 
 
     export const Home = () => {

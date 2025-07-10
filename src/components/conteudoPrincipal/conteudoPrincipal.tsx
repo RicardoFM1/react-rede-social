@@ -3,16 +3,17 @@ import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
 import { Theme } from "../../Context/context";
-import { jwtDecode } from "jwt-decode";
-import { useNavigate, Navigate } from "react-router-dom";
+
+
+import { apiController } from "../../controller/api.controller";
+import type { ReturnUser } from "../../schemas/usuario.schemas";
+import type { iPosts } from "../../schemas/posts.schemas";
 
 export const ConteudoPrincipal = () => {
   const { corTema } = useContext(Theme);
   const CoresJS = corTema === "Escuro" ? "Escuro" : "Claro";
-  console.log(corTema);
   const classeDivInfoPerfil = "divInfoPerfil";
   const ClasseDivICores = `${classeDivInfoPerfil}-${CoresJS}`;
-  console.log(ClasseDivICores);
   const ClasseDivAgora = "divAgora";
   const classeDivAgoraCores = `${ClasseDivAgora}-${CoresJS}`;
   const IconScript1 = "IconScript1";
@@ -20,31 +21,47 @@ export const ConteudoPrincipal = () => {
   const IconScript2 = "IconScript2";
   const IconScript2Cor = `${IconScript2}-${CoresJS}`;
 
-  interface TokenData {
-    sub: string;
-    email?: string;
-    name?: string;
-    exp: number;
-  }
+const [user,setUser]= useState({}as ReturnUser)
+console.log(user)
+const [isLogged, SetIslogged] = useState(false);
+const [posts, setPosts] = useState([] as iPosts)
 
-  let [isLogged, SetIslogged] = useState(false);
-  let [decode, setDecode] = useState<TokenData | null>(null);
-  const navigate = useNavigate();
-  useEffect(() => {
+  const getUser=async()=>{
+  const res = await apiController.get("/usuarios/retrieve",{
+      headers:{
+        "Authorization":`Bearer ${localStorage.getItem("token")}`
+      } 
+    }
+  )
+
+
     const token = localStorage.getItem("token");
-    if (token) {
+    if (token ) {
       SetIslogged(true);
-      const decodedToken = jwtDecode<TokenData>(token);
-      setDecode(decodedToken);
-      console.log(decodedToken, "decoded");
     } else {
       SetIslogged(false);
-      setTimeout(() => {
-        navigate("/login");
-      }, 3000);
     }
-  }, [Navigate]);
-  if (isLogged) {
+
+  if(res.data){
+    setUser(res.data)
+    const postsRes = await apiController.get(`/posts/user/${res.data.id}`)
+    setPosts(postsRes.data)
+    console.log(postsRes, "postres")
+    console.log(posts)
+  console.log(res.data)
+  }else {
+    SetIslogged(false);
+  }
+  
+  return res.data
+}
+useEffect(()=>{
+
+  getUser()
+},[])
+if (isLogged) {
+
+
     return (
       <>
         <div>
@@ -75,9 +92,9 @@ export const ConteudoPrincipal = () => {
                     </div>
                     <div className={style.nomePerfil}>
                       <div>
-                        <h1>{decode?.name || "Usuário"}</h1>
+                        <h1>{user.name || "Usuário"}</h1>
                       </div>
-                      <p>@{decode?.name || "Usuário"}</p>
+                      <p>@{user.name || "Usuário"}</p>
                     </div>
                     <div className={style.BtnInfoPerfil}>
                       <button className={style.BtnInfoPerfil1}>C</button>
@@ -120,51 +137,21 @@ export const ConteudoPrincipal = () => {
                   <h2>Scripts recentes</h2>
                 </div>
                 <div className={style.Scripts}>
-                  <div>
+                    {posts.map((post)=>{
+                      return <div>
                     <Iconify
                       icon="vaadin:quote-left"
                       ClassName={style[IconScript1Cor]}
                     />
-                    testando testando testando testando testando testando
-                    testando testando testando testando testando testando
-                    testando testando testando testando testando testando
-                    testando testando testando testando testando testando
-                    testando testando testando testando testando testando
-                    testando testando testando testando testando testando
-                    testando testando testando
+                   <p>{post.content}</p> 
+                    
+            
                     <Iconify
-                      icon="vaadin:quote-right"
-                      ClassName={style[IconScript2Cor]}
+                    icon="vaadin:quote-right"
+                    ClassName={style[IconScript2Cor]}
                     />
                   </div>
-                  <div>
-                    <Iconify
-                      icon="vaadin:quote-left"
-                      ClassName={style[IconScript1Cor]}
-                    />
-                    testando2 testando2 testando2 testando2 testando2 testando2
-                    testando2 testando2 testando2 testando2 testando2 testando2
-                    testando2 testando2 testando2 testando2 testando2 testando2
-                    testando2 testando2 testando2
-                    <Iconify
-                      icon="vaadin:quote-right"
-                      ClassName={style[IconScript2Cor]}
-                    />
-                  </div>
-                  <div>
-                    <Iconify
-                      icon="vaadin:quote-left"
-                      ClassName={style[IconScript1Cor]}
-                    />
-                    test ando3 testando3 testando3 testando3 testando3 testando3
-                    testando3 test ando3 tes tando3 testa ndo3 testando3
-                    testando3 temm stando3 tes tando3 testando3 testnnn n n
-                    ando3 testando3 testando3 testa ndo3 test ando3 testando3
-                    <Iconify
-                      icon="vaadin:quote-right"
-                      ClassName={style[IconScript2Cor]}
-                    />
-                  </div>
+                  })}
                 </div>
               </div>
 
