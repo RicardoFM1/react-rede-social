@@ -127,10 +127,10 @@ body{
     justify-content: space-evenly;
     gap: 20px;
 }
-.Scripts div{
+.Scripts div{ 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    min-height: 100px;
-    max-width: 250px;
+    max-width: 100%;
+    width: 100%;
     padding: 10px;
     margin: 0 0 18px 0;
     border-left: 3px solid red;
@@ -248,6 +248,10 @@ body{
   } 
   .tituloScript{
     margin-top: 60px;
+  }
+  .Scripts div{
+    max-width: 100%;
+    width: 100%;
   }
 }
 
