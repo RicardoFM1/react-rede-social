@@ -143,7 +143,11 @@ if (isLogged) {
                       icon="vaadin:quote-left"
                       ClassName={style[IconScript1Cor]}
                     />
-                   <p>{post.content}</p> 
+                    <p>{post.content}</p>
+                      
+
+                      
+                    
                     
             
                     <Iconify
