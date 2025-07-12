@@ -44,7 +44,7 @@ const [posts, setPosts] = useState([] as iPosts)
 
   if(res.data){
     setUser(res.data)
-    const postsRes = await apiController.get(`/posts/user/${res.data.id}`)
+    const postsRes = await apiController.get(`/posts/user/${res.data.id}?limit=6`)
     setPosts(postsRes.data)
     console.log(postsRes, "postres")
     console.log(posts)
