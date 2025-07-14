@@ -26,25 +26,28 @@ console.log(user)
 const [isLogged, SetIslogged] = useState(false);
 const [posts, setPosts] = useState([] as iPosts)
 const [offset, setOffset] = useState(0)
+const [isDisabled, setIsDisabled] = useState(false)
 
 const Avançar=()=>{
   getUser()
   setOffset(offset + 6)
-  
 }
+useEffect(()=>{
+  if (offset <= 0) {
+    setIsDisabled(true);
+}
+ if (offset > 0) {
+    setIsDisabled(false);
+ }
+}, [offset]);
+
 const Retrocedor=()=>{
   getUser()
   setOffset(offset - 6)
 
 }
 console.log(offset, "offset")
-// console.log(limit, "limit")
-// useEffect(() => {
-//   setTimeout(() => {
-//     Avançar()
-//     console.log(offset, "offset")
-//   }, 4000);
-// }, [offset])
+
 
 
   const getUser=async()=>{
@@ -181,7 +184,7 @@ if (isLogged) {
                   ) 
                   
                   }
-                  <button onClick={Retrocedor}>Ver menos</button>
+                  <button onClick={Retrocedor} disabled={isDisabled}>Ver menos</button>
                   <button onClick={Avançar}>Ver mais</button>
                 </div>
               </div>
