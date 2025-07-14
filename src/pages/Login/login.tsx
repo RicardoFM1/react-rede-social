@@ -8,11 +8,10 @@ import { useForm } from "react-hook-form"
 import { createLoginSchema, type iCreateLogin } from "../../schemas/login.schemas"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Input } from "../../components/input/Input"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { MainContext } from "../../Context/MainContext"
 import { Theme } from "../../Context/context"
 import { Iconify } from "../../components/iconify/iconify"
-
 
 export const Login=()=>{
     const {corTema} = useContext(Theme)
@@ -25,7 +24,6 @@ export const Login=()=>{
     const btnSubmitCor = `${btnSubmit}-${CoresJS}`
     const navigate = useNavigate()
     const { setUser } = useContext(MainContext)
-    
     const {
         register,
         handleSubmit,
@@ -55,10 +53,10 @@ export const Login=()=>{
         console.log(error,"error")
         toast.error(error.response.data.message)
       }
-        
     }
     return <>
     <Header/>
+  
     <div className={style.divVoltar}>
 
     <Link className={style.linkVoltar} to={"/"}><Iconify icon="tabler:arrow-back" height={48} width={48} color="blue"/></Link>

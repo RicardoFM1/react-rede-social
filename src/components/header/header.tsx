@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Iconify } from "../iconify/iconify";
 import style from "./header.module.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Theme } from "../../Context/context";
 export const Header = () => {
   const {corTema} = useContext(Theme)
@@ -21,6 +21,14 @@ export const Header = () => {
   const IconPesquisa = "IconPesquisa"
   const IconPesquisaCor = `${IconPesquisa}-${CoresJS}`
   
+  // const [isLogged, SetIslogged] = useState(false);
+  //     const token = localStorage.getItem("token");
+  //   if (token ) {
+  //     SetIslogged(true);
+  //   } else {
+  //     SetIslogged(false);
+  //   }
+  //   if (isLogged) {
   return (
     <header className={style[HeaderCores]}>
       <div className={style.tituloDiv}>
@@ -60,4 +68,5 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+} 
+

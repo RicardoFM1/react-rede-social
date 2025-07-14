@@ -19,7 +19,7 @@ export const Feed = ({ idUsuario }: FeedProps) => {
   };
   const getPosts = async () => {
     setLoading(true);
-    const res = await apiController.get("/posts");
+    const res = await apiController.get("/posts?limit=6");
     console.log(res.data, "res");
     const posts: iPosts = res.data;
     if (posts) {

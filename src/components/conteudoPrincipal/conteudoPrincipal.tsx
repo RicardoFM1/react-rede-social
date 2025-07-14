@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { use, useContext, useEffect, useState } from "react";
 import { Feed } from "../feed/feed";
 import { Iconify } from "../iconify/iconify";
 import style from "./conteudoPrincipal.module.css";
@@ -25,6 +25,27 @@ const [user,setUser]= useState({}as ReturnUser)
 console.log(user)
 const [isLogged, SetIslogged] = useState(false);
 const [posts, setPosts] = useState([] as iPosts)
+const [offset, setOffset] = useState(0)
+
+const Avançar=()=>{
+  getUser()
+  setOffset(offset + 6)
+  
+}
+const Retrocedor=()=>{
+  getUser()
+  setOffset(offset - 6)
+
+}
+console.log(offset, "offset")
+// console.log(limit, "limit")
+// useEffect(() => {
+//   setTimeout(() => {
+//     Avançar()
+//     console.log(offset, "offset")
+//   }, 4000);
+// }, [offset])
+
 
   const getUser=async()=>{
   const res = await apiController.get("/usuarios/retrieve",{
@@ -44,7 +65,7 @@ const [posts, setPosts] = useState([] as iPosts)
 
   if(res.data){
     setUser(res.data)
-    const postsRes = await apiController.get(`/posts/user/${res.data.id}?limit=6`)
+    const postsRes = await apiController.get(`/posts/user/${res.data.id}?limit=6&offset=${offset}`)
     setPosts(postsRes.data)
     console.log(postsRes, "postres")
     console.log(posts)
@@ -56,7 +77,6 @@ const [posts, setPosts] = useState([] as iPosts)
   return res.data
 }
 useEffect(()=>{
-
   getUser()
 },[])
 if (isLogged) {
@@ -155,7 +175,14 @@ if (isLogged) {
                     ClassName={style[IconScript2Cor]}
                     />
                   </div>
-                  })}
+                  
+                  }
+                  
+                  ) 
+                  
+                  }
+                  <button onClick={Retrocedor}>Ver menos</button>
+                  <button onClick={Avançar}>Ver mais</button>
                 </div>
               </div>
 
